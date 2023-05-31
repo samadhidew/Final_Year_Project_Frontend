@@ -1,0 +1,60 @@
+<app-header></app-header>
+<!-- inner banner -->
+<section class="w3l-inner-banner-main" >
+  <div class="about-inner" id ="image" >
+    <div class="wrapper">
+
+      <ul class="breadcrumbs-custom-path">
+        <h3>Payment Details</h3>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- //covers -->
+<!-- contacts -->
+<section class="w3l-contacts-9-main">
+  <div class="contacts-9">
+    <div class="wrapper">
+      <div class="top-map">
+        <div class="map-w3l-content-9">
+          <div class="cont-details">
+            <h5>Your Selections</h5>
+
+            <address *ngFor="let slot of TimeSlots; let i = index">
+              <div *ngIf="slot.userId == username && slot.status == 1">
+              <p><span class="fa fa-soccer-ball-o"></span>{{sport}} - {{date}}</p>
+              <p><span class="tab"> </span><span class="fa fa-clock-o"></span>{{slot.cinemaSeatID}}<span class="tab"></span><span class="tab"> - </span> <b>Rs 500.00</b></p>
+              </div>
+            </address>
+            <address>
+              <p><span class="fa fa-money"></span><b>Total Payment<span class="tab1"></span><span class="tab"> - </span>Rs {{total*500}}.00</b></p>
+            </address>
+
+          </div>
+
+        </div>
+
+
+        <div class="map-w3l-content-9">
+          <div class="cont-details">
+            <h5>Your Details</h5>
+
+            <address>
+              <p><span class="fa fa-user"></span>User Name  : {{username}}</p>
+              <p><span class="fa fa-phone"></span>Phone Number : {{phone}}</p>
+              <p><span class="fa fa-envelope"></span>Email : {{email}}</p>
+            </address>
+            <button (click)="makePayment(total*500)">Pay Now</button>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- //contacts -->
+<app-footer></app-footer>

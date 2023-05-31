@@ -1,0 +1,32 @@
+<div style="display: flex; flex-wrap: nowrap;">
+  <div class="col-md-10 offset-md-1 mt-7">
+
+    <div class="container" >
+      <div class="movie-card" *ngFor="let sport of SportList">
+        <a [routerLink]="['/detail',sport.id]">
+          <div class="movie-header" style="background: url({{sport.imgUrl}}); background-size:cover; background-position: center; background-repeat: no-repeat; ">
+          </div><!--movie-header-->
+        </a>
+        <div class="movie-content">
+          <div class="movie-content-header">
+            <a [routerLink]="['/detail',sport.id]">
+              <h3 class="movie-title">{{sport.title}}</h3>
+            </a>
+          </div>
+          <div class="movie-info">
+            <div >
+              <p>{{sport.desc}}</p>
+
+            </div><!--date,time-->
+
+          </div>
+          <div style="text-align: center; font-size: larger; color: rgb(13, 77, 77); margin-top: 10px">
+            <a [routerLink]="['/eventdetails',sport.id]" >	<h3>BOOK NOW</h3></a>
+          </div>
+        </div><!--movie-content-->
+      </div><!--movie-card-->
+    </div><!--container-->
+  </div>
+
+</div>
+

@@ -1,0 +1,38 @@
+<app-header></app-header>
+<!-- inner banner -->
+<section class="w3l-gallery-25-top" >
+  <!-- gallery-25 -->
+  <div class="gallery-25" >
+    <div class="wrapper-full" style="margin-left: 400px">
+      <div class="gallery-25-content">
+        <div class="d-grid grid-columns">
+          <div class="column">
+            <div class="box13">
+              <a href="single.html"
+              ><img
+                src="{{sport.imgUrl}}"
+                class="img-responsive"
+                alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="column two">
+            <div class="box13">
+              <h3 style="margin-bottom: 20px"><a href="single.html">{{sport.title}}</a></h3>
+
+              <label for="language">Select a Day For Reservation:</label>
+              <select name="{{selected}}" id="language" #teams (change)="onSelected()">
+                <option default *ngFor="let date of week" value="{{date |date:'EEMMMd'}}" > {{ date |date:'EE, MMM d'}}</option>
+              </select>
+              <p>Selected Date - {{selectedTeam}}</p>
+              <a (click)="submit()" class="action" type="submit">Submit</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- //contacts -->
+<app-footer></app-footer>

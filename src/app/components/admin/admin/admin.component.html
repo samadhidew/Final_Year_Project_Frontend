@@ -1,0 +1,137 @@
+<app-header></app-header>
+<!-- inner banner -->
+<section class="w3l-inner-banner-main" >
+  <div class="about-inner" id ="image" >
+    <div class="wrapper">
+
+      <ul class="breadcrumbs-custom-path">
+        <h3>Payment Details</h3>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- //covers -->
+<!-- contacts -->
+<section class="w3l-contacts-9-main">
+  <div class="contacts-9">
+    <div class="wrapper">
+      <div class="top-map">
+        <div class="map-w3l-content-9">
+          <div class="cont-details">
+            <h5>Selections</h5>
+
+            <address *ngFor="let slot of TimeSlots; let i = index">
+              <div *ngIf="slot.userId == 'Abilash1'">
+                <p><span class="fa fa-soccer-ball-o"></span>Tennis - Apr04</p>
+                <p><span class="tab"> </span><span class="fa fa-clock-o"></span>{{slot.cinemaSeatID}}<span class="tab"></span><span class="tab"> - </span> <b>Rs 500.00</b></p>
+              </div>
+            </address>
+            <address>
+              <p><span class="fa fa-money"></span><b>Total Payment<span class="tab1"></span><span class="tab"> - </span>Rs {{total*500}}.00</b></p>
+            </address>
+
+          </div>
+
+        </div>
+
+
+        <div class="map-w3l-content-9">
+          <div class="cont-details">
+            <h5>Details</h5>
+
+            <address>
+              <p><span class="fa fa-user"></span>User Name  : Abilash01</p>
+              <p><span class="fa fa-phone"></span>Phone Number : 0767642021</p>
+              <p><span class="fa fa-envelope"></span>Email : abilash@gamil.com</p>
+            </address>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+      <img
+        src="assets/images/payment.jpg"
+        class="img-responsive"
+        alt=""
+      />
+      <button (click)="conformed()" style="margin-right: 20px">Conform</button>
+      <button (click)="rejected()">Reject</button>
+      <div *ngIf="conform">
+      <p style="margin-top: 10px; font-size: 25px; color: green">The Time slot is Conformed  </p>
+        </div>
+      <div *ngIf="reject">
+      <p style="margin-top: 10px; font-size: 25px; color: red">The Time slot is Rejected  </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- //contacts -->
+
+<section class="w3l-contacts-9-main">
+  <div class="contacts-9">
+    <div class="wrapper">
+      <div class="top-map">
+        <div class="map-w3l-content-9">
+          <div class="cont-details">
+            <h5>Selections</h5>
+
+            <address *ngFor="let slot of TimeSlots; let i = index">
+              <div *ngIf="slot.userId == 'Abilash1'">
+                <p><span class="fa fa-soccer-ball-o"></span>Cricket - Apr08</p>
+                <p><span class="tab"> </span><span class="fa fa-clock-o"></span>{{slot.cinemaSeatID}}<span class="tab"></span><span class="tab"> - </span> <b>Rs 500.00</b></p>
+              </div>
+            </address>
+            <address>
+              <p><span class="fa fa-money"></span><b>Total Payment<span class="tab1"></span><span class="tab"> - </span>Rs {{total*500}}.00</b></p>
+            </address>
+
+          </div>
+
+        </div>
+
+
+        <div class="map-w3l-content-9">
+          <div class="cont-details">
+            <h5>Details</h5>
+
+            <address>
+              <p><span class="fa fa-user"></span>User Name  : Abilash01</p>
+              <p><span class="fa fa-phone"></span>Phone Number : 0767642021</p>
+              <p><span class="fa fa-envelope"></span>Email : abilash@gamil.com</p>
+            </address>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+      <img
+        src="assets/images/payment.jpg"
+        class="img-responsive"
+        alt=""
+      />
+      <button (click)="conformed()" style="margin-right: 20px">Conform</button>
+      <button (click)="rejected()">Reject</button>
+      <div *ngIf="conform">
+        <p style="margin-top: 10px; font-size: 25px; color: green">The Time slot is Conformed  </p>
+      </div>
+      <div *ngIf="reject">
+        <p style="margin-top: 10px; font-size: 25px; color: red">The Time slot is Rejected  </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<app-footer></app-footer>

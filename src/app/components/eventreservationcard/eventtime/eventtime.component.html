@@ -1,0 +1,59 @@
+
+<app-header></app-header>
+<div class="container" class="col-md-0 offset-md-1 mt-5">
+
+  <div class="col" style="margin-top: 50px">
+    <strong style="font-size: 1.5em; margin-top: 100px;">Choose Time You want</strong>
+    <div class="moviehall">
+      <ul class="showcase">
+        <li>
+          <div class="seat"></div>
+          <small>N/A</small>
+        </li>
+
+        <li>
+          <div class="seat selected"></div>
+          <small>Selected</small>
+        </li>
+
+        <li>
+          <div class="seat occupied"></div>
+          <small>Occupied</small>
+        </li>
+
+        <li>
+          <div class="seat process"></div>
+          <small>Process</small>
+        </li>
+
+      </ul>
+
+      <div class="container">
+        <div class="screen" style="display:inline-flex;"></div>
+        <div class="moviehall">
+          <div >
+            <div class="row">
+              <div class="col-md-2 offset-md-0 mt-1" *ngFor="let time of SportTime; let i = index">
+                <div  [ngClass]="{'selected': time.active,'':!time.active,'occupied':(time.status == 2 && time.userId),'process':(time.status == 1 && time.userId)}"
+                      class="seat" (click)="onSelected(time.cinemaSeatID)" style="color: white;">
+                  <h3>{{time.cinemaSeatID}}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <button mat-raised-button color="primary"
+          style="margin-top: 50px; margin-bottom: 50px; margin-right:10px; font-size: 30px; padding: 30px; background-color: #ffae00" (click)="onSubmitting()">
+    SUBMIT
+  </button>
+</div>
+
+<app-footer></app-footer>
+
+

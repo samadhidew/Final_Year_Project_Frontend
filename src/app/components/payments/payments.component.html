@@ -1,0 +1,35 @@
+<!--<app-header></app-header>-->
+
+<!--<form>-->
+<!--  <div class="upload_container">-->
+<!--<label for="images" class="drop-container">-->
+<!--  <span class="drop-title">Drop payment slip here</span>-->
+<!--  or-->
+<!--  <input type="file" id="images" accept="image/*" required>-->
+<!--</label>-->
+<!--  </div>-->
+<!--  <div class="upload_container">-->
+<!--  <button class="upload" style="color: black" (click)="upload()">Upload</button>-->
+<!--  </div>-->
+<!--</form>-->
+
+<!--<app-footer></app-footer>-->
+
+<h1>Create Profile</h1>
+
+<form  [formGroup]="form" (submit)="onSubmit()">
+  <div>
+    <input formControlName="name" type="text" placeholder="Enter name..." />
+  </div>
+  <div>
+    <input (change)="onFileSelect($event)" type="file" />
+  </div>
+  <div *ngIf="imageData">
+    <img [src]="imageData" [alt]="form.value.name" />
+  </div>
+  <div>
+    <button type="submit">Create profile</button>
+  </div>
+</form>
+
+

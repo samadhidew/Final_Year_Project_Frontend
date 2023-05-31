@@ -1,0 +1,9 @@
+.action{
+  background-color: rgba(230, 154, 12, 0.93);
+  border: solid #aa5c21;
+  border-width: 0 2.5px 2.5px 0;
+  display: inline-block;
+  padding: 4px 8px 8px 4px;
+  margin: 1px 3px;
+}
+
